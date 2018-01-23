@@ -2,6 +2,7 @@ package fi.haagahelia.customer;
 
 import java.util.Date;
 
+import org.joda.time.DateTime;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,27 +30,37 @@ public class CustomerApplication {
 			Customer c3 = new Customer("Dan", "Davidson", "Main Road 32 B", "23130", "Flintsone", "dan.d@mail.com", "232-1227006");
 			repository.save(c3);
 		
+			Date dt = new Date();
+			DateTime dtOrg = new DateTime(dt);
+			Date dtPlusOne = dtOrg.plusDays(1).toDate();			
+			Date dtPlusTwo = dtOrg.plusDays(2).toDate();			
+			Date dtPlusThree = dtOrg.plusHours(2).toDate();			
+			Date dtPlusFour = dtOrg.plusDays(4).toDate();			
+			Date dtPlusFive = dtOrg.plusDays(4).toDate();			
+			Date dtPlusSix = dtOrg.plusDays(4).toDate();			
+
+			
 			Training t = new Training(new Date(), 60, "Spinning");
 			t.setCustomer(c);
 			trepository.save(t);
-			t = new Training(new Date(), 30, "Gym training");
+			t = new Training(dtPlusOne, 30, "Gym training");
 			t.setCustomer(c);
 			trepository.save(t);
 			
-			t = new Training(new Date(), 90, "Gym training");
+			t = new Training(dtPlusTwo, 90, "Gym training");
 			t.setCustomer(c2);
 			trepository.save(t);
-			t = new Training(new Date(), 60, "Fitness");
+			t = new Training(dtPlusThree, 60, "Fitness");
 			t.setCustomer(c2);
 			trepository.save(t);
-			t = new Training(new Date(), 60, "Spinning");
+			t = new Training(dtPlusFour, 60, "Spinning");
 			t.setCustomer(c2);
 			trepository.save(t);
 
-			t = new Training(new Date(), 45, "Gym training");
+			t = new Training(dtPlusFive, 45, "Gym training");
 			t.setCustomer(c3);
 			trepository.save(t);
-			t = new Training(new Date(), 45, "Zumba");
+			t = new Training(dtPlusSix, 45, "Zumba");
 			t.setCustomer(c3);
 			trepository.save(t);
 			t = new Training(new Date(), 60, "Zumba");
