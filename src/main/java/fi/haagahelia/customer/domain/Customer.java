@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Customer {
 	@Id
@@ -17,6 +19,7 @@ public class Customer {
 	private String firstname, lastname, streetaddress, postcode, city, email, phone;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
+	@JsonIgnore
 	private List<Training> trainings;
 	
 	public Customer() {
