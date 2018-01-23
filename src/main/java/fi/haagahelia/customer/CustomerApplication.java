@@ -35,9 +35,9 @@ public class CustomerApplication {
 			Date dtPlusOne = dtOrg.plusDays(1).toDate();			
 			Date dtPlusTwo = dtOrg.plusDays(2).toDate();			
 			Date dtPlusThree = dtOrg.plusHours(2).toDate();			
-			Date dtPlusFour = dtOrg.plusDays(4).toDate();			
+			Date dtPlusFour = dtOrg.plusDays(3).toDate();			
 			Date dtPlusFive = dtOrg.plusDays(4).toDate();			
-			Date dtPlusSix = dtOrg.plusDays(4).toDate();			
+			Date dtPlusSix = dtOrg.plusDays(5).toDate();			
 
 			
 			Training t = new Training(new Date(), 60, "Spinning");
