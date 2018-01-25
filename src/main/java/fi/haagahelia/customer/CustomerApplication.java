@@ -29,6 +29,12 @@ public class CustomerApplication {
 			repository.save(c2);
 			Customer c3 = new Customer("Dan", "Davidson", "Main Road 32 B", "23130", "Flintsone", "dan.d@mail.com", "232-1227006");
 			repository.save(c3);
+			Customer c4 = new Customer("Erick", "Wilfrid", "71 Pilgrim Avenue", "23130", "Flintsone", "ewilf@mail.com", "232-1227006");
+			repository.save(c4);
+			Customer c5 = new Customer("Tylar", "Orrell", "70 Bowman Street", "23000", "Flintsone", "t.orrell@mail.com", "232-1227006");
+			repository.save(c5);
+			Customer c6 = new Customer("Sally", "Gareth", "4 Goldfield Road", "22722", "Flintsone", "s.gareth@mail.com", "232-1227006");
+			repository.save(c6);
 		
 			Date dt = new Date();
 			DateTime dtOrg = new DateTime(dt);
@@ -38,7 +44,7 @@ public class CustomerApplication {
 			Date dtPlusFour = dtOrg.plusDays(3).toDate();			
 			Date dtPlusFive = dtOrg.plusDays(4).toDate();			
 			Date dtPlusSix = dtOrg.plusDays(5).toDate();			
-
+			Date dtPlusSeven = dtOrg.plusDays(6).toDate();			
 			
 			Training t = new Training(new Date(), 60, "Spinning");
 			t.setCustomer(c);
@@ -66,6 +72,9 @@ public class CustomerApplication {
 			t = new Training(new Date(), 60, "Zumba");
 			t.setCustomer(c3);
 			trepository.save(t);			
+			t = new Training(new Date(), 90, "Jogging");
+			t.setCustomer(c6);
+			trepository.save(t);				
 		};
 	}
 
