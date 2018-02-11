@@ -27,7 +27,7 @@ public class CustomerApplication {
 			repository.save(c);
 			Customer c2 = new Customer("Mary", "Philips", "Hill Street 3", "23322", "Flintsone", "m.philips@mail.com", "232-310122");
 			repository.save(c2);
-			Customer c3 = new Customer("Dan", "Davidson", "Main Road 32 B", "23130", "Flintsone", "dan.d@mail.com", "232-1227006");
+			Customer c3 = new Customer("Dan", "Davidson", "32 Main Road", "23130", "Flintsone", "dan.d@mail.com", "232-1227006");
 			repository.save(c3);
 			Customer c4 = new Customer("Erick", "Wilfrid", "71 Pilgrim Avenue", "23130", "Flintsone", "ewilf@mail.com", "232-1227006");
 			repository.save(c4);
@@ -35,7 +35,11 @@ public class CustomerApplication {
 			repository.save(c5);
 			Customer c6 = new Customer("Sally", "Gareth", "4 Goldfield Road", "22722", "Flintsone", "s.gareth@mail.com", "232-1227006");
 			repository.save(c6);
-		
+			Customer c7 = new Customer("Roseanne", "Kimball", "13 Goldfield Road", "22712", "Flintsone", "kimball@mail.com", "232-457133");
+			repository.save(c7);
+			Customer c8 = new Customer("Leyla", "Elsi", "41 Main Road", "23130", "Flintsone", "l.elsie@mail.com", "232-457133");
+			repository.save(c8);
+
 			Date dt = new Date();
 			DateTime dtOrg = new DateTime(dt);
 			Date dtPlusOne = dtOrg.plusDays(1).toDate();			
