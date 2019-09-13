@@ -3,10 +3,13 @@ package fi.haagahelia.customer.web;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import fi.haagahelia.customer.utils.PopulateDB;
 import fi.haagahelia.customer.domain.Customer;
 import fi.haagahelia.customer.domain.CustomerRepository;
 import fi.haagahelia.customer.domain.Training;
@@ -21,6 +24,9 @@ public class CustomerController {
 	@Autowired
 	public TrainingRepository trepository;
 	
+	@Autowired
+	private PopulateDB populateDb;
+	
     @RequestMapping(value = "/getcustomers")
 	List<Customer> getCustomers() {	
 		return (List<Customer>) repository.findAll();
@@ -30,5 +36,10 @@ public class CustomerController {
 	List<Training> getTrainings() {	
 		return (List<Training>) trepository.findAll();
 	}    
-	
+ 
+	@PostMapping("reset")
+	public ResponseEntity<String>  reset() {
+		populateDb.populate();
+		return ResponseEntity.ok("DB reset done");
+	}	
 }
