@@ -45,7 +45,8 @@ public class PopulateDB {
 		repository.save(c10);
 		Customer c11 = new Customer("Janet", "Jones", "31 Fifth Street", "20010", "Flintsone", "janet.j@mail.com", "232-457110");
 		repository.save(c11);
-
+		Customer c12 = new Customer("Tina", "Dublin", "2 Main Street", "20010", "Flintsone", "t.dublin@mail.com", "232-211555");
+		repository.save(c12);
 		
 		Date dt = new Date();
 		DateTime dtOrg = new DateTime(dt);
@@ -55,8 +56,7 @@ public class PopulateDB {
 		Date dtPlusFour = dtOrg.plusDays(3).toDate();			
 		Date dtPlusFive = dtOrg.plusDays(4).toDate();			
 		Date dtPlusSix = dtOrg.plusDays(5).toDate();			
-		Date dtPlusSeven = dtOrg.plusDays(6).toDate();			
-		
+
 		Training t = new Training(new Date(), 60, "Spinning");
 		t.setCustomer(c);
 		trepository.save(t);
