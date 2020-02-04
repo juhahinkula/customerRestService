@@ -41,7 +41,12 @@ public class PopulateDB {
 		repository.save(c8);
 		Customer c9 = new Customer("Kevin", "Dublin", "2 Main Street", "20010", "Flintsone", "k.dublin@mail.com", "232-147127");
 		repository.save(c9);
+		Customer c10 = new Customer("Laura", "Jones", "34 Venice Street", "20010", "Flintsone", "laura.jones@mail.com", "232-133147");
+		repository.save(c10);
+		Customer c11 = new Customer("Janet", "Jones", "31 Fifth Street", "20010", "Flintsone", "janet.j@mail.com", "232-457110");
+		repository.save(c11);
 
+		
 		Date dt = new Date();
 		DateTime dtOrg = new DateTime(dt);
 		Date dtPlusOne = dtOrg.plusDays(1).toDate();			
