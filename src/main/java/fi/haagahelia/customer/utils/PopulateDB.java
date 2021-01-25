@@ -56,7 +56,9 @@ public class PopulateDB {
 		Date dtPlusFour = dtOrg.plusDays(3).toDate();			
 		Date dtPlusFive = dtOrg.plusDays(4).toDate();			
 		Date dtPlusSix = dtOrg.plusDays(5).toDate();			
+		Date dtPlusSeven = dtOrg.plusDays(6).toDate();			
 
+		
 		Training t = new Training(new Date(), 60, "Spinning");
 		t.setCustomer(c);
 		trepository.save(t);
@@ -85,6 +87,9 @@ public class PopulateDB {
 		trepository.save(t);			
 		t = new Training(new Date(), 90, "Jogging");
 		t.setCustomer(c6);
-		trepository.save(t);					
+		trepository.save(t);
+		t = new Training(dtPlusSeven, 60, "Gym training");
+		t.setCustomer(c6);
+		trepository.save(t);
 	}
 }
