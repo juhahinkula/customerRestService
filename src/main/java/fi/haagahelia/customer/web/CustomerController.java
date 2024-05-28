@@ -32,7 +32,7 @@ public class CustomerController {
 		return (List<Customer>) repository.findAll();
 	}
 
-    @RequestMapping(value = "/api/gettrainings")
+    @RequestMapping(value = "/gettrainings")
 	List<Training> getTrainings() {	
 		return (List<Training>) trepository.findAll();
 	}    
