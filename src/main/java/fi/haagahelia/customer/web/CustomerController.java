@@ -27,12 +27,12 @@ public class CustomerController {
 	@Autowired
 	private PopulateDB populateDb;
 	
-    @RequestMapping(value = "/getcustomers")
+    @RequestMapping(value = "/api/getcustomers")
 	List<Customer> getCustomers() {	
 		return (List<Customer>) repository.findAll();
 	}
 
-    @RequestMapping(value = "/gettrainings")
+    @RequestMapping(value = "/api/gettrainings")
 	List<Training> getTrainings() {	
 		return (List<Training>) trepository.findAll();
 	}    
